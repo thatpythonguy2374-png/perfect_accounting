@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect</title>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+<div class="nav-left">Perfect Accounting Solutions</div>
+<nav class="nav-center">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<div class="dropdown">
+    <a class="dropbtn">Services</a>
+
+    <div class="dropdown-content">
+        <a href="gst.html">Goods & Service Tax</a>
+        <a href="#">Income Tax Consultancy</a>
+        <a href="#">Accounting Services</a>
+        <a href="#">Company Law</a>
+        <a href="#">NGO / Societies</a>
+        <a href="#">Investment Advisory</a>
+        <a href="#">Loan & Property Consultancy</a>
+        <a href="#">Sales Tax / VAT Consultancy</a>
+    </div>
+</div>
+<a href="query.html">Query</a>
+</nav>
+<div class="nav-right">
+<button class="btn-primary" onclick="openContact()">Get In Touch</button>
+</div>
+</header>
+
+
+
+<section class="query-section">
+
+<div class="query-container">
+
+<h2>QUERY SHEET</h2>
+
+<form id="queryForm">
+
+<div class="query-grid">
+
+<div>
+<label>Name *</label>
+<input type="text" name="user_name" required>
+</div>
+
+<div>
+<label>Designation</label>
+<input type="text" name="designation">
+</div>
+
+<div>
+<label>Organization</label>
+<input type="text" name="organization">
+</div>
+
+<div>
+<label>Office Address</label>
+<input type="text" name="office_address">
+</div>
+
+<div>
+<label>City *</label>
+<input type="text" name="city" required>
+</div>
+
+<div>
+<label>Email *</label>
+<input type="email" name="user_email" required>
+</div>
+
+<div>
+<label>Telephone No</label>
+<input type="text" name="telephone">
+</div>
+
+<div>
+<label>Mobile *</label>
+<input type="text" name="mobile" required>
+</div>
+
+<div>
+<label>Subject of Query *</label>
+<select name="subject" required>
+<option value="">-- Select --</option>
+<option>Goods & Service Tax</option>
+<option>Income Tax</option>
+<option>Accounting Services</option>
+<option>Company Law</option>
+<option>NGO / Societies</option>
+<option>Investment Advisory</option>
+<option>Loan & Property Consultancy</option>
+<option>Sales Tax / VAT Consultancy</option>
+</select>
+</div>
+
+</div>
+
+<label>Query *</label>
+<textarea name="message" rows="5" required></textarea>
+
+<button type="submit" class="btn-primary">Submit</button>
+
+</form>
+<div id="successMessage" class="success-box">
+✅ Your query has been submitted successfully.  
+We will contact you soon.
+</div>
+
+</div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
