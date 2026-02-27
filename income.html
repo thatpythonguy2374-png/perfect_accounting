@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+<div class="nav-left">Perfect Accounting Solutions</div>
+<nav class="nav-center">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<div class="dropdown">
+    <a class="dropbtn">Services</a>
+
+    <div class="dropdown-content">
+        <a href="gst.html">Goods & Service Tax</a>
+        <a href="income.html">Income Tax Consultancy</a>
+        <a href="accounting.html">Accounting Services</a>
+        <a href="company.html">Company Law</a>
+        <a href="ngo.html">NGO / Societies</a>
+        <a href="investment.html">Investment Advisory</a>
+        <a href="loan.html">Loan & Property Consultancy</a>
+        <a href="sales-tax.html">Sales Tax / VAT Consultancy</a>
+    </div>
+</div>
+<a href="query.html">Query</a>
+</nav>
+<div class="nav-right">
+<button class="btn-primary" onclick="openContact()">Get In Touch</button>
+</div>
+</header>
+
+<body>
+
+<section class="about-clean">
+
+<div class="about-clean-container">
+
+<h1>GOODS AND SERVICES TAX</h1>
+
+<p>
+We have designed a comprehensive approach, which is aligned to the needs of our clients and we assist our clients in undertaking GST compliances under the following legislations in an efficient manner.
+</p>
+<p>
+Our GST solutions help businesses remain compliant while minimizing
+tax liabilities and ensuring smooth financial operations.
+</p>
+
+
+<a href="index.html" class="btn-dark">← Back to Home</a>
+
+</div>
+</section>
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-col">
+        <h3>Useful Links</h3>
+        <ul>
+            <li><a href="https://incometaxindiaefiling.gov.in/e-Filing/Services/KnowYourPanLink.html" target="_blank" rel="noopener noreferrer">→ PAN</a></li>
+            <li><a href="https://incometaxindiaefiling.gov.in/e-Filing/Services/KnowYourTanLink.html" target="_blank" rel="noopener noreferrer">→ TAN</a></li>
+            <li><a href="https://incometaxindiaefiling.gov.in/" target="_blank" rel="noopener noreferrer" >→ E-Filing</a></li>
+            <li><a href="https://onlineservices.tin.egov-nsdl.com/etaxnew/tdsnontds.jsp" target="_blank" rel="noopener noreferrer">→ Online Payment</a></li>
+            <li><a href="https://incometaxindia.gov.in/Pages/downloads/challans.aspx" target="_blank" rel="noopener noreferrer">→ Challans</a></li>
+        </ul>
+    </div>
+
+    <!-- CENTER -->
+    <div class="footer-col">
+        <h3>Links</h3>
+        <ul class="social-links">
+            <li><a href="#">🔵 Facebook</a></li>
+            <li><a href="#">🐦 Twitter</a></li>
+            <li><a href="#">💼 LinkedIn</a></li>
+        </ul>
+    </div>
+    
+    <!-- RIGHT -->
+    <div class="footer-col">
+        <h3>Contact Us</h3>
+
+        <div class="contact-item">
+            📍 Address - Dev Kunj, Sector - 7 Dwarka, New Delhi - 110077 
+        </div>
+
+        <div class="contact-item">
+            📞 Contact No - (+91) 7503727672
+        </div>
+
+        <div class="contact-item">
+            ✉ perfectaccouting@gmail.com
+        </div>
+
+        <div class="contact-item">
+        <a href="mailto:perfectaccouting@gmail.com" class="email-link">
+        📨 Write Your Message
+        </a>
+        </div>
+    </div>
+
+</div>
+
+</footer>
+<script src="script.js"></script>
+
+
+<div id="contactModal" class="modal">
+
+<div class="modal-box">
+
+<span class="close-btn" onclick="closeContact()">×</span>
+
+<h2>Contact Us</h2>
+
+<p><strong>📍 Address:</strong><br>
+Dev Kunj, Sector - 7 Dwarka, New Delhi - 110077 
+</p>
+
+<p><strong>📞 Phone:</strong><br>
++91 7503727672
+</p>
+
+<p><strong>✉ Email:</strong><br>
+perfectaccouting@gmail.com
+</p>
+
+</div>
+</div>
+<div id="serviceModal" class="modal">
+
+<div class="modal-box">
+
+<span class="close-btn" onclick="closeService()">×</span>
+
+<h2 id="serviceTitle"></h2>
+<p id="serviceDesc"></p>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
