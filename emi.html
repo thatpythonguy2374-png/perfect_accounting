@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect</title>
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style2.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+<div class="nav-left">Perfect Accounting Solutions</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav class="nav-center">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<div class="dropdown">
+    <a class="dropbtn" onclick="toggleDropdown(event)">Services</a>
+
+    <div class="dropdown-content">
+        <a href="gst.html">Goods & Service Tax</a>
+        <a href="income.html">Income Tax Consultancy</a>
+        <a href="accounting.html">Accounting Services</a>
+        <a href="company.html">Company Law</a>
+        <a href="ngo.html">NGO / Societies</a>
+        <a href="investment.html">Investment Advisory</a>
+        <a href="loan.html">Loan & Property Consultancy</a>
+        <a href="sales-tax.html">Sales Tax / VAT Consultancy</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <a class="dropbtn" onclick="toggleDropdown(event)">Knowledge Bank</a>
+
+    <div class="dropdown-content">
+
+        <div class="submenu">
+            <a href="#" class="submenu-btn" onclick="toggleSubmenu(event)">Calculators <span class="arrow">▸</span></a>
+
+            <div class="submenu-content">
+                <a href="Calculators/gst-cal.html">GST Calculator</a>
+                <a href="Calculators/emi.html">EMI Calculator</a>
+                <a href="Calculators/sip.html">SIP Calculator</a>
+                <a href="Calculators/hra.html">HRA</a>
+                <a href="Calculators/nps.html">NPS</a>
+                <a href="Calculators/pf.html">PF Calculator</a>
+                <a href="Calculators/lumpsum.html">Lumpsum Calculator</a>
+            </div>
+        </div>
+
+        <a href="#">Bulletins</a>
+        <a href="#">Utilities</a>
+        <a href="#">links</a>
+        <a href="#">Acts</a>
+        <a href="#">Rules</a>
+        <a href="#">Forms</a>
+
+    </div>
+</div>
+<a href="query.html">Query</a>
+<a href="careers.html">Careers</a>
+<a href="#" class="btn-primary mobile-btn" onclick="openContact()">
+    Get In Touch
+</a>
+</nav>
+</header>
+
+<body>
+
+<div class="calculator-wrapper">
+
+<h1 class="calculator-title">EMI Calculator</h1>
+
+<div class="calculator-card">
+
+<div class="calculator-inputs">
+
+<label>Loan Amount</label>
+
+<div class="input-group">
+<span class="rupee">₹</span>
+<input type="text" id="loan">
+</div>
+
+<input type="range" id="loanSlider" min="50000" max="10000000" step="10000">
+
+
+<label>Number of Months</label>
+
+<div class="slider-value">
+<span id="monthsValue">12</span> Months
+</div>
+
+<input type="range" id="months" min="6" max="240" value="12">
+
+
+<label>Interest Rate</label>
+
+<div class="slider-value">
+<span id="rateValue">18</span> %
+</div>
+
+<input type="range" id="rate" min="5" max="18" step="0.1" value="18">
+
+
+<button onclick="resetAll()">Reset</button>
+
+</div>
+
+
+<div class="calculator-results">
+
+<canvas id="emiChart"></canvas>
+
+<div class="result-block">
+<span>Monthly EMI</span>
+<h2 id="emiValue">₹0</h2>
+</div>
+
+<div class="result-block">
+<span>Total Interest</span>
+<h2 id="interestValue">₹0</h2>
+</div>
+
+<div class="result-block">
+<span>Total Payable</span>
+<h2 id="totalValue">₹0</h2>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script1.js"></script>
+<script src="script2.js"></script>
+
+</body>
+

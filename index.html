@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect</title>
+<link rel="stylesheet" href="style1.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+<div class="nav-left">Perfect Accounting Solutions</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav class="nav-center">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<div class="dropdown">
+    <a class="dropbtn" onclick="toggleDropdown(event)">Services</a>
+
+    <div class="dropdown-content">
+        <a href="gst.html">Goods & Service Tax</a>
+        <a href="income.html">Income Tax Consultancy</a>
+        <a href="accounting.html">Accounting Services</a>
+        <a href="company.html">Company Law</a>
+        <a href="ngo.html">NGO / Societies</a>
+        <a href="investment.html">Investment Advisory</a>
+        <a href="loan.html">Loan & Property Consultancy</a>
+        <a href="sales-tax.html">Sales Tax / VAT Consultancy</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <a class="dropbtn" onclick="toggleDropdown(event)">Knowledge Bank</a>
+
+    <div class="dropdown-content">
+
+        <div class="submenu">
+            <a href="#" class="submenu-btn" onclick="toggleSubmenu(event)">Calculators <span class="arrow">▸</span></a>
+
+            <div class="submenu-content">
+                <a href="gst-cal.html">GST Calculator</a>
+                <a href="emi.html">EMI Calculator</a>
+                <a href="sip.html">SIP Calculator</a>
+                <a href="hra.html">HRA</a>
+                <a href="nps.html">NPS</a>
+                <a href="pf.html">PF Calculator</a>
+                <a href="Calculators/lumpsum.html">Lumpsum Calculator</a>
+            </div>
+        </div>
+
+        <a href="#">Bulletins</a>
+        <a href="#">Utilities</a>
+        <a href="#">links</a>
+        <a href="#">Acts</a>
+        <a href="#">Rules</a>
+        <a href="#">Forms</a>
+
+    </div>
+</div>
+<a href="query.html">Query</a>
+<a href="careers.html">Careers</a>
+<a href="#" class="btn-primary mobile-btn" onclick="openContact()">
+    Get In Touch
+</a>
+</nav>
+</header>
+<main>
+<section class="about-intro">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="videos/hero.mp4" type="video/mp4">  
+    </video>
+    <div class="hero-overlay"></div>
+
+<div class="about-intro-container">
+
+    
+
+    <h1>Welcome To Perfect Accounting Solutions</h1>
+
+    <p>
+        We are a professional accounting and tax consultancy firm helping
+        businesses and individuals with financial planning, taxation,
+        auditing, and compliance services. Our goal is to deliver reliable,
+        transparent, and result-driven solutions that help our clients grow
+        with confidence.
+    </p>
+
+    <a href="about.html" class="btn-primary">Read More</a>
+
+</div>
+
+</section>
+
+
+
+<section class="services-table">
+
+<h1 class="section-title">OUR SERVICES</h1>
+
+<div class="service-table">
+
+    <a href="gst.html" class="service-box">
+        <img src="images/gst.jpg" alt="GST">
+        <div class="service-hover">
+            <h3>GOODS AND SERVICE TAX</h3>
+            <p class="card-para">
+            We have designed a comprehensive approach aligned to client needs.
+            </p>
+        </div>
+    </a>
+
+    <!-- CARD 2 -->
+    <a href="income.html" class="service-box">
+        <img src="images/income.jpg" alt="Income">
+        <div class="service-hover">
+            <h3>INCOME TAX CONSULTANCY</h3>
+            <p class="card-para">We provide PAN card, filing of income tax, TDS returns.</p>
+        </div>
+    </a>
+
+    <!-- CARD 3 -->
+    <a href="accounting.html" class="service-box">
+        <img src="images/accounting.jpg" alt="Accounting">
+        <div class="service-hover">
+            <h3>ACCOUNTING SERVICES</h3>
+            <p class="card-para">
+                Full range of accounting and bookkeeping services for
+                businesses and professionals.
+            </p>
+        </div>
+    </a>
+
+    <!-- CARD 4 -->
+    <a href="company.html" class="service-box">
+        <img src="images/company.jpg" alt="Company Law">
+        <div class="service-hover">
+            <h3>COMPANY LAW</h3>
+            <p class="card-para">
+                Tax consultancy and services in company law matters.
+            </p>
+        </div>
+    </a>
+
+    <!-- CARD 5 -->
+    <a href="ngo.html" class="service-box">
+        <img src="images/ngo.jpg" alt="NGO">
+        <div class="service-hover">
+            <h3>NGO / SOCIETIES / TRUST</h3>
+            <p class="card-para">
+                Registration procedures for societies, trusts and
+                partnership firms.
+            </p>
+        </div>
+    </a>
+
+    
+    <!-- CARD 6 -->
+     <a href="investment.html" class="service-box">
+        <img src="images/investment.jpg" alt="Investment">
+        <div class="service-hover">
+            <h3>INVESTMENT ADVISORY</h3>
+            <p class="card-para">
+                Managing your money and planning your financial security.
+            </p>
+        </div>
+    </a>
+
+    <!-- CARD 7 -->
+     <a href="sales-tax.html" class="service-box">
+        <img src="images/sales-tax.jpg" alt="Sales Tax">
+        <div class="service-hover">
+            <h3>SALES TAX/VAT CONSULTANCY</h3>
+            <p class="card-para">
+                We provide consultancy in Registration under Delhi VAT act.
+            </p>
+        </div>
+    </a>
+
+    <!-- CARD 8 -->
+     <a href="loan.html" class="service-box">
+        <img src="images/loan.jpg" alt="Loan">
+        <div class="service-hover">
+            <h3>FINANCIAL/LOAN & PROPERTY CONSULTANCY</h3>
+            <p class="card-para">
+                We arranges and processes loans keeping in mind the financial needs of the customers, Like Home loans..
+            </p>
+        </div>
+    </a>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-col">
+        <h3>Useful Links</h3>
+        <ul>
+            <li><a href="https://incometaxindiaefiling.gov.in/e-Filing/Services/KnowYourPanLink.html" target="_blank" rel="noopener noreferrer">→ PAN</a></li>
+            <li><a href="https://incometaxindiaefiling.gov.in/e-Filing/Services/KnowYourTanLink.html" target="_blank" rel="noopener noreferrer">→ TAN</a></li>
+            <li><a href="https://incometaxindiaefiling.gov.in/" target="_blank" rel="noopener noreferrer" >→ E-Filing</a></li>
+            <li><a href="https://onlineservices.tin.egov-nsdl.com/etaxnew/tdsnontds.jsp" target="_blank" rel="noopener noreferrer">→ Online Payment</a></li>
+            <li><a href="https://incometaxindia.gov.in/Pages/downloads/challans.aspx" target="_blank" rel="noopener noreferrer">→ Challans</a></li>
+        </ul>
+    </div>
+
+    <!-- CENTER -->
+    <div class="footer-col">
+        <h3>Links</h3>
+        <ul class="social-links">
+            <li><a href="#"><img src="images/facebook.png" alt="facebook logo" class="footer_logo"> Facebook</a></li>
+            <li><a href="#"><img src="images/twitter.png" alt="twitter logo" class="footer_logo"> Twitter</a></li>
+            <li><a href="#"><img src="images/linkedin.png" alt="linkdin logo" class="footer_logo"> LinkedIn</a></li>
+        </ul>
+    </div>
+    
+    <!-- RIGHT -->
+    <div class="footer-col">
+        <h3>Contact Us</h3>
+
+        <div class="contact-item">
+            <img src="images/location.png" alt="pin logo" class="footer_logo"> Delhi, Noida, Gurugram
+        </div>
+
+        <div class="contact-item">
+            <img src="images/contact.png" alt="contact logo" class="footer_logo"> Contact No - (+91) 7503727672
+        </div>
+
+        <div class="contact-item">
+            <img src="images/email.png" alt="emai logo" class="footer_logo"> perfectaccouting@gmail.com
+        </div>
+
+        <div class="contact-item">
+        <a href="mailto:perfectaccouting@gmail.com" class="email-link">
+        <img src="images/message.png" alt="message logo" class="footer_logo"> Write Your Message
+        </a>
+        </div>
+    </div>
+
+</div>
+
+</footer>
+
+
+
+<div id="contactModal" class="modal">
+
+<div class="modal-box">
+
+<span class="close-btn" onclick="closeContact()">×</span>
+
+<h2>Contact Us</h2>
+
+<p><strong>📍 Address:</strong><br>
+Dev Kunj, Sector - 7 Dwarka, New Delhi - 110077 
+</p>
+
+<p><strong>📞 Phone:</strong><br>
++91 7503727672
+</p>
+
+<p><strong>✉ Email:</strong><br>
+perfectaccouting@gmail.com
+</p>
+
+</div>
+</div>
+<div id="serviceModal" class="modal">
+
+<div class="modal-box">
+
+<span class="close-btn" onclick="closeService()">×</span>
+
+<h2 id="serviceTitle"></h2>
+<p id="serviceDesc"></p>
+
+</div>
+</div>
+<script src="script1.js"></script>
+<script src="script2.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

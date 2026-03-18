@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect</title>
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style2.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+<div class="nav-left">Perfect Accounting Solutions</div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav class="nav-center">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<div class="dropdown">
+    <a class="dropbtn" onclick="toggleDropdown(event)">Services</a>
+
+    <div class="dropdown-content">
+        <a href="gst.html">Goods & Service Tax</a>
+        <a href="income.html">Income Tax Consultancy</a>
+        <a href="accounting.html">Accounting Services</a>
+        <a href="company.html">Company Law</a>
+        <a href="ngo.html">NGO / Societies</a>
+        <a href="investment.html">Investment Advisory</a>
+        <a href="loan.html">Loan & Property Consultancy</a>
+        <a href="sales-tax.html">Sales Tax / VAT Consultancy</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <a class="dropbtn" onclick="toggleDropdown(event)">Knowledge Bank</a>
+
+    <div class="dropdown-content">
+
+        <div class="submenu">
+            <a href="#" class="submenu-btn" onclick="toggleSubmenu(event)">Calculators <span class="arrow">▸</span></a>
+
+            <div class="submenu-content">
+                <a href="gst-cal.html">GST Calculator</a>
+                <a href="emi.html">EMI Calculator</a>
+                <a href="sip.html">SIP Calculator</a>
+                <a href="hra.html">HRA</a>
+                <a href="nps.html">NPS</a>
+                <a href="pf.html">PF Calculator</a>
+                <a href="Calculators/lumpsum.html">Lumpsum Calculator</a>
+            </div>
+        </div>
+
+        <a href="#">Bulletins</a>
+        <a href="#">Utilities</a>
+        <a href="#">links</a>
+        <a href="#">Acts</a>
+        <a href="#">Rules</a>
+        <a href="#">Forms</a>
+
+    </div>
+</div>
+<a href="query.html">Query</a>
+<a href="careers.html">Careers</a>
+<a href="#" class="btn-primary mobile-btn" onclick="openContact()">
+    Get In Touch
+</a>
+</nav>
+</header>
+
+<body>
+
+<div class="calculator-wrapper">
+
+<h1 class="calculator-title">Lumpsum Calculator</h1>
+
+<div class="calculator-card">
+
+<div class="calculator-inputs">
+
+<label>Investment</label>
+
+<div class="input-group">
+<span class="rupee">₹</span>
+<input type="text" id="investment">
+</div>
+
+<input type="range" id="investmentSlider" min="1000" max="1000000" step="1000">
+
+<label>Return (%)</label>
+<input type="number" id="rate">
+
+<label>Years</label>
+<input type="number" id="years">
+
+<button onclick="resetCalculator({
+investment:100000,
+rate:12,
+years:10
+})">Reset</button>
+
+</div>
+
+<div class="calculator-results">
+
+<canvas id="lumpChart"></canvas>
+
+<div class="result-block">
+<span>Future Value</span>
+<h2 id="lumpResult">₹0</h2>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script1.js"></script>
+<script src="script2.js"></script>
+
+</body>
+</html>
