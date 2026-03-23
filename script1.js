@@ -29,12 +29,20 @@ function initNavbar() {
 
 function initSmoothScroll() {
     document.querySelectorAll("a[href^='#']").forEach(link => {
-        link.addEventListener("click", e => {
-            const target = document.querySelector(link.getAttribute("href"));
-            if (!target) return;
 
-            e.preventDefault();
-            target.scrollIntoView({ behavior: "smooth" });
+        link.addEventListener("click", e => {
+            const href = link.getAttribute("href");
+
+            // ✅ ignore empty links like "#"
+            if (!href.startsWith("#") || href === "#") return;
+
+            const target = document.querySelector(href);
+
+            // ✅ only apply smooth scroll if target exists
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth" });
+            }
         });
     });
 }
@@ -119,23 +127,20 @@ d.classList.remove("show");
 
 });
 
-function toggleSubmenu(e){
+function toggleSubmenu(e) {
+    e.preventDefault();
+    e.stopPropagation();
 
-e.preventDefault();
-e.stopPropagation();
+    const current = e.currentTarget.closest(".submenu");
 
-const current = e.target.closest(".submenu");
+    document.querySelectorAll(".submenu").forEach(menu => {
+        if (menu !== current) {
+            menu.classList.remove("open");
+        }
+    });
 
-document.querySelectorAll(".submenu").forEach(menu=>{
-if(menu !== current){
-menu.classList.remove("open");
+    current.classList.toggle("open");
 }
-});
-
-current.classList.toggle("open");
-
-}
-
 
 /* ================================
    EMAILJS QUERY FORM
@@ -174,6 +179,46 @@ form.addEventListener("submit", function(e){
 });
 }
 
+/* ================================
+CAREER FORM EMAILJS
+================================ */
+
+const careerForm = document.getElementById("careerForm");
+const careerSuccess = document.getElementById("careerSuccess");
+
+if(careerForm){
+
+careerForm.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.sendForm(
+"service_j21oc1m",
+"template_gahmjw9", // your template ID
+this
+).then(
+() => {
+
+careerForm.reset();
+
+/* SHOW SUCCESS MESSAGE */
+if(careerSuccess){
+careerSuccess.style.display = "block";
+}
+
+/* OPTIONAL: HIDE FORM */
+careerForm.style.display = "none";
+
+},
+(error) => {
+alert("Failed to send application.");
+console.log(error);
+}
+);
+
+});
+
+}
 
 function toggleMobileDropdown(e){
     e.preventDefault();
